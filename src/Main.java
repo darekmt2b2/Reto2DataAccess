@@ -1,13 +1,7 @@
-import database.DBquery;
-
-import java.sql.SQLException;
+import Drivers.Filter;
 
 public class Main {
     public static void main(String[] args){
-        try {
-            DBquery.query("SELECT * FROM aircraft");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        Filter.Blacklist_checker();
     }
 }
